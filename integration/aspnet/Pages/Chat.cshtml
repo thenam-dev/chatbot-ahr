@@ -1,0 +1,24 @@
+@page
+@model Ahr.Chatbot.RazorIntegration.Pages.ChatModel
+@{
+    Layout = null;
+}
+<!doctype html>
+<html lang="vi">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>AHR+ · Trợ lý điều hướng</title>
+    <link rel="stylesheet" href="~/chatbot/styles.css" />
+    <link rel="stylesheet" href="~/integration.css" />
+</head>
+<body>
+    <main class="integration-shell">
+        <h1>Trợ lý điều hướng AHR+</h1>
+        <p>Nhập hoặc nói yêu cầu để nhận đường dẫn tới màn hình tương ứng.</p>
+        <form id="chat-antiforgery" hidden>@Html.AntiForgeryToken()</form>
+        <div id="ahr-chatbot" data-endpoint="@Url.Page("/Chat", "Send")"></div>
+    </main>
+    <script type="module" src="~/integration.js"></script>
+</body>
+</html>

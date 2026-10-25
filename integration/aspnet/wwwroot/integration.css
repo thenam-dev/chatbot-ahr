@@ -1,0 +1,4 @@
+body { margin: 0; background: #f4f7fb; color: #182a3b; font-family: system-ui, sans-serif; }
+.integration-shell { max-width: 760px; margin: 3rem auto; padding: 0 1rem; }
+.integration-shell > h1 { font-size: 1.6rem; }
+.integration-shell > p { margin-bottom: 1.5rem; line-height: 1.6; }

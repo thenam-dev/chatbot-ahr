@@ -1,0 +1,110 @@
+{
+  "version": 1,
+  "fallbackPath": "/hr/help",
+  "routes": [
+    {
+      "id": "home",
+      "label": "Trang chủ nhân sự",
+      "description": "Mở trang tổng quan của hệ thống quản lý nhân sự AHR+.",
+      "path": "/hr",
+      "keywords": ["trang chủ nhân sự", "trang chủ", "bảng điều khiển", "dashboard nhân sự"],
+      "permissions": []
+    },
+    {
+      "id": "profile",
+      "label": "Hồ sơ cá nhân",
+      "description": "Xem hồ sơ và thông tin cá nhân của người đang đăng nhập; không trả về dữ liệu hồ sơ trong chatbot.",
+      "path": "/hr/profile",
+      "keywords": ["hồ sơ cá nhân", "hồ sơ của tôi", "thông tin cá nhân", "hồ sơ tôi", "hồ sơ"],
+      "permissions": ["profile:read:self"]
+    },
+    {
+      "id": "attendance",
+      "label": "Chấm công và giờ công",
+      "description": "Xem bảng chấm công, giờ công, tăng ca, đi muộn và về sớm của bản thân.",
+      "path": "/hr/attendance",
+      "keywords": ["chấm công", "bảng công", "giờ công", "giờ làm của tôi", "giờ làm trong tháng", "đã làm bao nhiêu giờ", "làm bao nhiêu giờ", "bao nhiêu giờ công", "tăng ca", "đi muộn", "về sớm"],
+      "permissions": ["attendance:read:self"]
+    },
+    {
+      "id": "leave",
+      "label": "Thông tin nghỉ phép",
+      "description": "Xem đơn nghỉ phép, lịch sử và số ngày phép còn lại của bản thân.",
+      "path": "/hr/leave",
+      "keywords": ["nghỉ phép", "đơn nghỉ phép", "lịch sử nghỉ phép", "số ngày phép", "ngày phép còn lại", "số dư phép", "nghỉ không lương"],
+      "permissions": ["leave:read:self"]
+    },
+    {
+      "id": "leave-create",
+      "label": "Mở mẫu đơn xin nghỉ phép",
+      "description": "Chỉ điều hướng đến màn hình lập đơn nghỉ phép để người dùng tự điền và xác nhận; chatbot không tạo hoặc gửi đơn.",
+      "path": "/hr/leave/new",
+      "keywords": ["xin nghỉ phép", "đăng ký nghỉ phép", "tạo đơn nghỉ phép", "làm đơn nghỉ phép", "gửi đơn nghỉ phép", "xin nghỉ", "đăng ký nghỉ", "tạo đơn nghỉ", "làm đơn nghỉ", "xin nghỉ không lương"],
+      "permissions": ["leave:create:self"]
+    },
+    {
+      "id": "payslips",
+      "label": "Phiếu lương cá nhân",
+      "description": "Mở nơi xem phiếu lương và thu nhập của bản thân; chatbot không đọc, tính hoặc xuất số tiền lương.",
+      "path": "/hr/payroll/payslips",
+      "keywords": ["phiếu lương", "bảng lương", "lương tháng", "lương của tôi", "lương", "thu nhập"],
+      "permissions": ["payroll:read:self"]
+    },
+    {
+      "id": "employees",
+      "label": "Danh mục nhân viên",
+      "description": "Mở danh sách, danh bạ hoặc hồ sơ nhân viên dành cho tài khoản có quyền quản lý nhân sự.",
+      "path": "/hr/employees",
+      "keywords": ["danh sách nhân viên", "danh bạ nhân viên", "hồ sơ nhân viên", "thông tin nhân viên", "danh sách nhân sự", "danh bạ", "nhân viên"],
+      "permissions": ["employees:read"]
+    },
+    {
+      "id": "teams",
+      "label": "Phòng ban",
+      "description": "Mở danh sách phòng ban hoặc sơ đồ tổ chức theo quyền được cấp.",
+      "path": "/hr/teams",
+      "keywords": ["phòng ban", "sơ đồ tổ chức", "cơ cấu tổ chức", "bộ phận"],
+      "permissions": ["teams:read"]
+    },
+    {
+      "id": "abc-score",
+      "label": "Kết quả đánh giá ABC hằng tháng",
+      "description": "Xem điểm và xếp loại ABC tháng của bản thân theo nội quy: khởi điểm 100 điểm và trừ điểm vi phạm. Đây không phải KPI doanh số, hoa hồng hay chấm điểm bán hàng.",
+      "path": "/hr/evaluations/abc",
+      "keywords": ["điểm abc", "xếp loại abc", "kết quả abc", "kết quả đánh giá", "điểm đánh giá", "đánh giá tháng", "điểm tháng này", "điểm vi phạm"],
+      "permissions": ["evaluation:read:self"]
+    },
+    {
+      "id": "abc-rules",
+      "label": "Quy định chấm điểm ABC",
+      "description": "Mở quy định đánh giá ABC theo tháng: ban đầu 100 điểm, trừ điểm khi vi phạm nội quy; xem mức trừ điểm, không tự tính điểm thực tế trong chatbot.",
+      "path": "/hr/evaluations/abc/rules",
+      "keywords": ["quy tắc abc", "quy định abc", "cách tính điểm abc", "thang điểm abc", "quy định trừ điểm", "quy định trừ điểm abc", "bảng trừ điểm", "mức trừ điểm", "100 điểm", "trừ điểm đi muộn", "vi phạm bị trừ điểm", "đi muộn có bị trừ điểm abc", "đi muộn trừ điểm abc", "đi muộn bị trừ điểm abc", "đi muộn thì trừ điểm abc", "đi muộn trừ bao nhiêu điểm", "đi muộn bị trừ bao nhiêu điểm", "trừ điểm đi muộn theo nội quy"],
+      "permissions": []
+    },
+    {
+      "id": "policies",
+      "label": "Nội quy và chính sách công ty",
+      "description": "Mở nội quy, quy chế làm việc, giờ làm việc, chính sách lương và quy định nghỉ phép của công ty.",
+      "path": "/hr/policies",
+      "keywords": ["nội quy", "quy chế", "chính sách công ty", "quy định công ty", "quy định làm việc", "giờ làm việc", "chính sách lương", "quy định nghỉ phép", "chính sách nghỉ phép", "chính sách", "quy định"],
+      "permissions": []
+    },
+    {
+      "id": "reports",
+      "label": "Báo cáo nhân sự",
+      "description": "Mở màn hình báo cáo nhân sự hoặc báo cáo chấm công của người có quyền; không truy xuất dữ liệu báo cáo.",
+      "path": "/hr/reports",
+      "keywords": ["báo cáo nhân sự", "báo cáo chấm công", "báo cáo tổng hợp", "báo cáo"],
+      "permissions": ["reports:read"]
+    },
+    {
+      "id": "help",
+      "label": "Trợ giúp điều hướng",
+      "description": "Mở hướng dẫn điều hướng khi yêu cầu không rõ, ngoài phạm vi hoặc người dùng không có quyền truy cập màn hình tương ứng.",
+      "path": "/hr/help",
+      "keywords": ["trợ giúp", "hướng dẫn sử dụng", "hỗ trợ", "trợ lý", "help"],
+      "permissions": []
+    }
+  ]
+}

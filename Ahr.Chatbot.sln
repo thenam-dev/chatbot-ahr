@@ -1,0 +1,59 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31903.59
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{B9E632FD-2423-4E53-A7F4-073C7A7B261C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ahr.Chatbot.Core", "src\Ahr.Chatbot.Core\Ahr.Chatbot.Core.csproj", "{7589CBD9-5ABF-4397-BDB2-2E5458A7AF4D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ahr.Chatbot.Infrastructure", "src\Ahr.Chatbot.Infrastructure\Ahr.Chatbot.Infrastructure.csproj", "{17C39422-54DE-4E36-96F0-B81F7AEED007}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ahr.Chatbot.Api", "src\Ahr.Chatbot.Api\Ahr.Chatbot.Api.csproj", "{31CC8062-D103-41BD-AF59-0178FACB28F9}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{DDEC8431-393E-4F08-B8A1-F0B5784B6BE2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ahr.Chatbot.Tests", "tests\Ahr.Chatbot.Tests\Ahr.Chatbot.Tests.csproj", "{2CCD8B16-457B-4139-97F1-E81DAA2414E5}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "integration", "integration", "{C3109992-6288-4017-A260-DC11B146ABBA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ahr.Chatbot.RazorIntegration", "integration\aspnet\Ahr.Chatbot.RazorIntegration.csproj", "{43692C11-4BD1-44A0-8EBC-37D7FA6751A7}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{7589CBD9-5ABF-4397-BDB2-2E5458A7AF4D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7589CBD9-5ABF-4397-BDB2-2E5458A7AF4D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7589CBD9-5ABF-4397-BDB2-2E5458A7AF4D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7589CBD9-5ABF-4397-BDB2-2E5458A7AF4D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{17C39422-54DE-4E36-96F0-B81F7AEED007}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{17C39422-54DE-4E36-96F0-B81F7AEED007}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{17C39422-54DE-4E36-96F0-B81F7AEED007}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{17C39422-54DE-4E36-96F0-B81F7AEED007}.Release|Any CPU.Build.0 = Release|Any CPU
+		{31CC8062-D103-41BD-AF59-0178FACB28F9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{31CC8062-D103-41BD-AF59-0178FACB28F9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{31CC8062-D103-41BD-AF59-0178FACB28F9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{31CC8062-D103-41BD-AF59-0178FACB28F9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2CCD8B16-457B-4139-97F1-E81DAA2414E5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2CCD8B16-457B-4139-97F1-E81DAA2414E5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2CCD8B16-457B-4139-97F1-E81DAA2414E5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2CCD8B16-457B-4139-97F1-E81DAA2414E5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{43692C11-4BD1-44A0-8EBC-37D7FA6751A7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{43692C11-4BD1-44A0-8EBC-37D7FA6751A7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{43692C11-4BD1-44A0-8EBC-37D7FA6751A7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{43692C11-4BD1-44A0-8EBC-37D7FA6751A7}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{7589CBD9-5ABF-4397-BDB2-2E5458A7AF4D} = {B9E632FD-2423-4E53-A7F4-073C7A7B261C}
+		{17C39422-54DE-4E36-96F0-B81F7AEED007} = {B9E632FD-2423-4E53-A7F4-073C7A7B261C}
+		{31CC8062-D103-41BD-AF59-0178FACB28F9} = {B9E632FD-2423-4E53-A7F4-073C7A7B261C}
+		{2CCD8B16-457B-4139-97F1-E81DAA2414E5} = {DDEC8431-393E-4F08-B8A1-F0B5784B6BE2}
+		{43692C11-4BD1-44A0-8EBC-37D7FA6751A7} = {C3109992-6288-4017-A260-DC11B146ABBA}
+	EndGlobalSection
+EndGlobal

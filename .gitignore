@@ -1,0 +1,13 @@
+**/bin/
+**/obj/
+TestResults/
+artifacts/
+.env
+.env.*
+!.env.example
+config/routes.local.json
+.DS_Store
+.vs/
+.idea/
+*.user
+node_modules/

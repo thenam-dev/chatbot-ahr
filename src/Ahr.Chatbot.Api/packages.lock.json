@@ -1,0 +1,16 @@
+{
+  "version": 1,
+  "dependencies": {
+    "net8.0": {
+      "ahr.chatbot.core": {
+        "type": "Project"
+      },
+      "ahr.chatbot.infrastructure": {
+        "type": "Project",
+        "dependencies": {
+          "Ahr.Chatbot.Core": "[1.0.0, )"
+        }
+      }
+    }
+  }
+}
