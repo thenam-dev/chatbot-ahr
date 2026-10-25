@@ -45,6 +45,10 @@ curl --fail http://127.0.0.1:8787/demo/chat \
 
 Request thứ hai phải trả `/hr/attendance`, không trả số giờ. Thu giọng nói dùng Web Speech API `vi-VN`: cần trình duyệt hỗ trợ, HTTPS/localhost và quyền micro. Trình duyệt có thể xử lý âm thanh qua dịch vụ của nhà cung cấp; API chatbot này chỉ nhận văn bản. Luôn có thể gõ khi micro không dùng được.
 
+Trong Visual Studio, đặt **Ahr.Chatbot.Api** làm Startup Project, chọn launch profile **Demo**, rồi F5. `Ahr.Chatbot.Core` là thư viện, không chạy trực tiếp. Profile Demo đã có `--demo` và môi trường Development.
+
+Nếu cập nhật từ bản cũ gặp `DirectoryNotFoundException` trỏ tới `src/Ahr.Chatbot.Api/wwwroot`, dừng debug rồi chạy `dotnet clean Ahr.Chatbot.sln` và build lại để xóa manifest static assets cũ. Giao diện nằm trong `public/` và được chép sang `bin/.../wwwroot` khi build; không cần tự tạo thư mục `wwwroot` trong project API.
+
 ## API dùng khi tích hợp
 
 Chạy dịch vụ **không có `--demo`** và cấu hình bí mật `Chatbot__ServiceToken` ở phía server. Token gồm 32–512 ký tự chữ/số ASCII hoặc `_-.~` (không có khoảng trắng). Không đưa token vào frontend hay commit vào Git. `.env.example` chỉ liệt kê tên cấu hình; .NET không tự nạp file `.env` này.

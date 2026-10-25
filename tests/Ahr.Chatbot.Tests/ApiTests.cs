@@ -160,8 +160,10 @@ public sealed class ApiTests(ApiFixture fixture) : IClassFixture<ApiFixture>
     }
 }
 
-public sealed class ApiFixture : IAsyncLifetime
+public class ApiFixture : IAsyncLifetime
 {
+    protected virtual string EnvironmentName => "Production";
+    protected virtual bool DemoMode => false;
     private Process? _process;
     public HttpClient Client { get; private set; } = null!;
     public HttpClient Anonymous { get; private set; } = null!;
@@ -187,12 +189,15 @@ public sealed class ApiFixture : IAsyncLifetime
             UseShellExecute = false
         };
         start.ArgumentList.Add(apiDll);
+        if (DemoMode) start.ArgumentList.Add("--demo");
         start.ArgumentList.Add("--urls");
         start.ArgumentList.Add($"http://127.0.0.1:{port}");
         start.Environment["Chatbot__ServiceToken"] = new string('t', 48); // Test-only value, never a deployed credential.
         start.Environment["Chatbot__Resolver"] = "rules";
         start.Environment["Chatbot__RouteCatalog"] = Path.Combine(root.FullName, "config/routes.example.json");
         start.Environment["Chatbot__RateLimitPerMinute"] = "1000";
+        start.Environment["ASPNETCORE_ENVIRONMENT"] = EnvironmentName;
+        start.Environment["DOTNET_ENVIRONMENT"] = EnvironmentName;
         _process = Process.Start(start) ?? throw new InvalidOperationException("Failed to start API.");
         var logs = new StringBuilder();
         _process.OutputDataReceived += (_, e) => { if (e.Data is not null) lock (logs) logs.AppendLine(e.Data); };

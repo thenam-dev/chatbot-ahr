@@ -4,6 +4,9 @@
     <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
     <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+    <!-- Assets are copied to output and served by explicit endpoints. The SDK's
+         development manifest otherwise points to a nonexistent project wwwroot. -->
+    <StaticWebAssetsEnabled>false</StaticWebAssetsEnabled>
   </PropertyGroup>
   <ItemGroup>
     <ProjectReference Include="../Ahr.Chatbot.Core/Ahr.Chatbot.Core.csproj" />

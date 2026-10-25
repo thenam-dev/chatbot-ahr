@@ -13,7 +13,8 @@ var demo = args.Contains("--demo", StringComparer.Ordinal);
 var builder = WebApplication.CreateBuilder(new WebApplicationOptions
 {
     Args = args.Where(arg => arg != "--demo").ToArray(),
-    ContentRootPath = AppContext.BaseDirectory
+    ContentRootPath = AppContext.BaseDirectory,
+    WebRootPath = Path.Combine(AppContext.BaseDirectory, "wwwroot")
 });
 var urls = builder.Configuration["urls"] ?? "http://127.0.0.1:8787";
 if (demo && urls.Split(';').Any(url => !IsLoopbackUrl(url)))
